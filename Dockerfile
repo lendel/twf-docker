@@ -4,6 +4,11 @@
 
 FROM node:24-bookworm-slim@sha256:01d566e8d94d8c619591d78652babfccd3c6992a3dffa9ed5ab39e11cf6c70e9
 
+# Links the GHCR package to this repository (needed for GITHUB_TOKEN to publish it).
+LABEL org.opencontainers.image.source="https://github.com/lendel/twf-docker" \
+      org.opencontainers.image.description="ton-wallet-finder for RunPod CPU pods: TON vanity address search with one command" \
+      org.opencontainers.image.licenses="MIT"
+
 # tini: proper PID 1 (signal forwarding, zombie reaping); openssh-server: RunPod SSH access.
 RUN apt-get update \
  && apt-get install -y --no-install-recommends tini openssh-server \
