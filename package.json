@@ -1,0 +1,27 @@
+{
+  "name": "twf-docker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Docker image for ton-wallet-finder: run a TON vanity address search on a cloud pod (RunPod) with a single command.",
+  "license": "MIT",
+  "author": {
+    "name": "Lendel",
+    "url": "https://github.com/lendel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lendel/twf-docker.git"
+  },
+  "bin": {
+    "twf": "src/twf.js"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.js\""
+  },
+  "dependencies": {
+    "ton-wallet-finder": "6.0.0"
+  }
+}

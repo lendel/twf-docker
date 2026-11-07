@@ -1,0 +1,5 @@
+# twf-docker: key-only root login (RunPod passes the key via PUBLIC_KEY)
+PermitRootLogin prohibit-password
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+X11Forwarding no
