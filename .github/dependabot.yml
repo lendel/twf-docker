@@ -4,10 +4,17 @@ updates:
     directory: /
     schedule:
       interval: weekly
+
   - package-ecosystem: docker
     directory: /
     schedule:
       interval: weekly
+    ignore:
+      # Only even Node.js majors become LTS; odd ones (25, 27, ...) are short-lived
+      # "Current" releases. Digest and minor/patch updates of the LTS line still come through.
+      - dependency-name: node
+        versions: ["25.x", "27.x", "29.x", "31.x", "33.x"]
+
   - package-ecosystem: github-actions
     directory: /
     schedule:
