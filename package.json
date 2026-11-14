@@ -22,6 +22,6 @@
     "test": "node --test \"test/**/*.test.js\""
   },
   "dependencies": {
-    "ton-wallet-finder": "6.0.0"
+    "ton-wallet-finder": "6.2.0"
   }
 }
